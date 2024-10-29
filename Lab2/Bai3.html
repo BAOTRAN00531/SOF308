@@ -42,9 +42,17 @@
                     <input type="number" class="form-control" id="phone" placeholder="Nhập số điện thoại">
                   </div>
                   <div class="mb-3">
-                    <label for="address" class="form-label">Địa chỉ</label>
-                    <textarea class="form-control" id="address" rows="3" placeholder="Nhập địa chỉ"></textarea>
-                  </div>
+                    <label for="password" class="col-sm-4 col-form-label">Mật Khẩu</label>
+                    <div class="col-sm-13">
+                      <input type="number" class="form-control" id="password" placeholder="Mật khẩu">
+                    </div>
+                  </div> 
+                  <div class="mb-3">
+                    <label for="password" class="col-sm-4 col-form-label">Xác Nhận Mật Khẩu</label>
+                    <div class="col-sm-13">
+                      <input type="number" class="form-control" id="password" placeholder="Xác nhận mật khẩu">
+                    </div>
+                  </div> 
                   <div class="mb-3">
                     <label class="form-label">Giới tính</label><br>
                     <div class="form-check form-check-inline">
@@ -56,10 +64,23 @@
                         <label class="form-check-label" for="female">Nữ</label>
                       </div>
                     </div>
-                    <div class="mb-3">
-                      <label for="studentId" class="form-label">Mã số sinh viên</label>
-                      <input type="text" class="form-control" id="studentId" placeholder="Nhập mã số sinh viên">
+                    <label for="language" class="col-sm-4 col-form-label">Chọn ngôn ngữ:</label>
+                    <div class="col-sm-13">
+                      <select id="language" name="language" class="form-control" onchange="changeLanguage()">
+                        <option value="vi">Tiếng Việt</option>
+                        <option value="en">Tiếng Anh</option>
+                      </select>
                     </div>
+                    <br>
+                    <div class="col-sm-13">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" id="termsAgree" name="terms" value="agree" required>
+                          <label class="form-check-label" for="termsAgree">
+                            Tôi đồng ý với các <a href="#">điều khoản và điều kiện</a>
+                          </label>
+                        </div>
+                      </div>
+                      <br>
                     <button type="submit" class="btn btn-primary">Đăng ký</button>
                   </form>
                 </div>
@@ -73,8 +94,8 @@
                 <div class="card-body">
                   <form>
                     <div class="mb-3">
-                      <label for="username" class="form-label">Tên đăng nhập</label>
-                      <input type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="text" class="form-control" id="email" placeholder="Nhập email">
                     </div>
                     <div class="mb-3">
                       <label for="password" class="form-label">Mật khẩu</label>
